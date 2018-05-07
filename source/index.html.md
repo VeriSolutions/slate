@@ -97,12 +97,6 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
 
 This endpoint retrieves all Accounts that you have access to.
 
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-`filter[id]=<ids>` | (null) | Takes a comma-separated list of ids (such as `5,8`) and returns the Accounts with those IDs
-
 # Units
 
 ## Get All Units
@@ -115,16 +109,48 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/units"
 
 This endpoint retrieves all Units that you have access to.
 
-### Query Parameters
+# Coolers
+
+## Get All Coolers
 
 ```shell
-curl -X GET "https://cloud.verisolutions.co/api/v7/units"
-  -d "filter[account-id]=<id>"
+curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
   -H "Authorization: Basic `echo -n <username>:<password> | base64`"
   -H "Content-Type: application.json"
 ```
 
+This endpoint retrieves all Coolers that you have access to.
+
+### Filtering
+
+```shell
+curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
+  -d "filter[show-temp]=1"
+  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Content-Type: application.json"
+```
+
+Coolers have a few extra parameters they can be filtered.
+
 Parameter | Default | Description
 --------- | ------- | -----------
-`filter[id]=<ids>` | (null) | Takes a comma-separated list of ids (such as `5,8`) and returns the Units with those IDs
-`filter[account-id]=<id>` | (null) | If provided an <code>&lt;id&gt;</code>, it will only show Units that belong to that Account
+`filter[show-temp]=<1 or 0>` | `1,0` | This identifies if the Cooler cares about temperature. `1` represents true and `0` represents false
+`filter[show-humidity]=<1 or 0>` | `1,0` | This identifies if the Cooler cares about humidity. `1` represents true and `0` represents false
+`filter[active-notifications]=<1 or 0>` | `1,0` | This identifies if a Cooler wants to be notified about temperature issues. `1` represents true and `0` represents false
+`filter[humidity-notifications]=<1 or 0>` | `1,0` | This identifies if a Cooler wants to be notified about humidity issues. `1` represents true and `0` represents false
+
+<aside class="warning">
+Not every parameter of a Cooler can be filtered. If you would like to be able to filter off a parameter thas is not permitted, contact the VS developers and we will change that for you.
+</aside>
+
+# Sensor Readings
+
+## Get All Sensor Readings
+
+```shell
+curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
+  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Content-Type: application.json"
+```
+
+This endpoint retrieves all Sensor Readings that you have access to.
