@@ -27,8 +27,12 @@ Code examples can be found in the dark section on the right.
 > On each request, send the Basic Auth credentials and correct MIME type:
 
 ```shell
+# Generate the token
+echo -n <your email>:<your password> | base64
+
+# Structure of API requests
 curl "api_endpoint_here"
-  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Authorization: Basic <token>"
   -H "Content-Type: application.json"
 ```
 
@@ -47,7 +51,7 @@ Sending `-H "Content-Type: application.json"` is not required, however, it could
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
   -d "filter[id]=5,8"
-  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Authorization: Basic <token>"
   -H "Content-Type: application.json"
 ```
 
@@ -95,7 +99,7 @@ If you receive an error message similar to the one on the right, contact the VS 
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
-  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Authorization: Basic <token>"
   -H "Content-Type: application.json"
 ```
 
@@ -107,7 +111,7 @@ This endpoint retrieves all Accounts that you have access to.
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/units"
-  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Authorization: Basic <token>"
   -H "Content-Type: application.json"
 ```
 
@@ -119,7 +123,7 @@ This endpoint retrieves all Units that you have access to.
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
-  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Authorization: Basic <token>"
   -H "Content-Type: application.json"
 ```
 
@@ -130,7 +134,7 @@ This endpoint retrieves all Coolers that you have access to.
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
   -d "filter[show-temp]=1"
-  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Authorization: Basic <token>"
   -H "Content-Type: application.json"
 ```
 
@@ -153,7 +157,7 @@ Not every parameter of a Cooler can be filtered. If you would like to be able to
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
-  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Authorization: Basic <token>"
   -H "Content-Type: application.json"
 ```
 
@@ -162,7 +166,7 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
   -d "filter[reading-time-min]=2018-05-07T12:00:00-04:00"
-  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Authorization: Basic <token>"
   -H "Content-Type: application.json"
 ```
 
