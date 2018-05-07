@@ -57,9 +57,13 @@ All data attributes returned can be used as a filter. The example to the right s
 
 Parameter | Default | Description
 --------- | ------- | -----------
+`filter[created-at-max]` | (null) | Returns results that have a `created_at` value less than the time given. The time must be in ISO8601 format.
+`filter[created-at-min]` | (null) | Returns results that have a `created_at` value greater than the time given. The time must be in ISO8601 format.
 `filter[id]=<ids>` | (null) | Takes a comma-separated list of ids (such as `5,8`) and returns the results with those IDs.
-`page[size]=<size>` | 10 | Identify how many results you would like returned. Max of 50.
+`filter[updated-at-max]` | (null) | Returns results that have a `updated_at` value less than the time given. The time must be in ISO8601 format.
+`filter[updated-at-min]` | (null) | Returns results that have a `updated_at` value greater than the time given. The time must be in ISO8601 format.
 `page[number]=<number>` | 1 | Results are broken up into pages, where the first 10 (or the value of `page[size]`) are on page 1 and 11 through 20 are on page 2.
+`page[size]=<size>` | 10 | Identify how many results you would like returned. Max of 50.
 
 
 <aside class="notice">
@@ -152,5 +156,19 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
   -H "Authorization: Basic `echo -n <username>:<password> | base64`"
   -H "Content-Type: application.json"
 ```
+
+### Filtering
+
+```shell
+curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
+  -d "filter[reading-time-min]=2018-05-07T12:00:00-04:00"
+  -H "Authorization: Basic `echo -n <username>:<password> | base64`"
+  -H "Content-Type: application.json"
+```
+
+Parameter | Default | Description
+--------- | ------- | -----------
+`filter[reading-time-max]` | (null) | Returns results that have a `reading_time` value less than the time given. The time must be in ISO8601 format.
+`filter[reading-time-min]` | (null) | Returns results that have a `reading_time` value greater than the time given. The time must be in ISO8601 format.
 
 This endpoint retrieves all Sensor Readings that you have access to.
