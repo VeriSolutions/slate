@@ -18,7 +18,7 @@ search: true
 
 Welcome to the VeriSolutions' API! VeriSolutions (VS) provides hardware and software for managing temperature and operational tasks.
 
-The VS API is a JSON:API standards compliant API which aims to make this data available to anyone who has a user account.
+The VS API is a [JSONAPI standards](http://jsonapi.org/) compliant API which aims to make this data available to anyone who has a user account.
 
 Code examples can be found in the dark section on the right.
 
@@ -33,7 +33,7 @@ echo -n <your email>:<your password> | base64
 # Structure of API requests
 curl "api_endpoint_here"
   -H "Authorization: Basic <token>"
-  -H "Content-Type: application.json"
+  -H "Content-Type: application/vnd.api+json"
 ```
 
 Authentication is done via Basic Auth, where `username` is your email address and `password` is your password. Basic Auth credentials must be sent on each request.
@@ -41,8 +41,6 @@ Authentication is done via Basic Auth, where `username` is your email address an
 <aside class="notice">
 Replace <code>&lt;username&gt;</code> and <code>&lt;password&gt;</code> with your email address and password, respectively.
 </aside>
-
-Sending `-H "Content-Type: application.json"` is not required, however, it could save you hours of troubleshooting. We recommend sending it on every request.
 
 # Filtering
 
@@ -52,7 +50,7 @@ Sending `-H "Content-Type: application.json"` is not required, however, it could
 curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
   -d "filter[id]=5,8"
   -H "Authorization: Basic <token>"
-  -H "Content-Type: application.json"
+  -H "Content-Type: application/vnd.api+json"
 ```
 
 All data attributes returned can be used as a filter. The example to the right shows filtering Accounts to just show two specific ones (the Account with ID of 5 and the Account with ID of 8).
@@ -95,36 +93,89 @@ If you receive an error message similar to the one on the right, contact the VS 
 
 # Accounts
 
-## Get All Accounts
+## Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
   -H "Authorization: Basic <token>"
-  -H "Content-Type: application.json"
+  -H "Content-Type: application/vnd.api+json"
 ```
 
 This endpoint retrieves all Accounts that you have access to.
 
+## Create
+
+```shell
+curl --request POST \
+  --url https://cloud.verisolutions.co/api/v7/accounts \
+  --header 'Authorization: Basic <token>' \
+  --header 'Content-Type: application/vnd.api+json' \
+  --data '{"data":{"type":"accounts","attributes":{"name":"<name>"}}}'
+```
+
+<aside class="warning">
+This functionality is only for Admins.
+</aside>
+
+### Validations
+
+Parameter | Rule
+--------- | ----
+`name` | Cannot be blank
+
+## Update
+
+```shell
+curl --request PATCH \
+  --url http://localhost:9292/api/v7/accounts/<id> \
+  --header 'Authorization: Basic <token>' \
+  --header 'Content-Type: application/vnd.api+json' \
+  --data '{"data":{"type":"accounts","id":"<id>","attributes":{"name":"<name>"}}}'
+```
+
+<aside class="warning">
+This functionality is only for Admins and Account Admins of that specific Account.
+</aside>
+
+### Validations
+
+Parameter | Rule
+--------- | ----
+`name` | Cannot be blank
+
+## Destroy
+
+```shell
+curl --request DELETE \
+  --url http://localhost:9292/api/v7/accounts/<id> \
+  --header 'Authorization: Basic <token>' \
+  --header 'Content-Type: application/vnd.api+json' \
+```
+
+<aside class="warning">
+This functionality is only for Admins.
+</aside>
+
 # Units
 
-## Get All Units
+## Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/units"
   -H "Authorization: Basic <token>"
-  -H "Content-Type: application.json"
+  -H "Content-Type: application/vnd.api+json"
 ```
 
 This endpoint retrieves all Units that you have access to.
 
 # Coolers
 
-## Get All Coolers
+## Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
   -H "Authorization: Basic <token>"
-  -H "Content-Type: application.json"
+  -H "Content-Type: application/vnd.api+json"
 ```
 
 This endpoint retrieves all Coolers that you have access to.
@@ -135,7 +186,7 @@ This endpoint retrieves all Coolers that you have access to.
 curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
   -d "filter[show-temp]=1"
   -H "Authorization: Basic <token>"
-  -H "Content-Type: application.json"
+  -H "Content-Type: application/vnd.api+json"
 ```
 
 Coolers have a few extra parameters they can be filtered.
@@ -153,12 +204,12 @@ Not every parameter of a Cooler can be filtered. If you would like to be able to
 
 # Sensor Readings
 
-## Get All Sensor Readings
+## Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
   -H "Authorization: Basic <token>"
-  -H "Content-Type: application.json"
+  -H "Content-Type: application/vnd.api+json"
 ```
 
 ### Filtering
@@ -167,7 +218,7 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
 curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
   -d "filter[reading-time-min]=2018-05-07T12:00:00-04:00"
   -H "Authorization: Basic <token>"
-  -H "Content-Type: application.json"
+  -H "Content-Type: application/vnd.api+json"
 ```
 
 Parameter | Default | Description
