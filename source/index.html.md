@@ -168,6 +168,23 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/units"
 
 This endpoint retrieves all Units that you have access to.
 
+## Create
+
+```shell
+curl --request POST \
+  --url https://cloud.verisolutions.co/api/v7/units \
+  --header 'Authorization: Basic <token>' \
+  --header 'Content-Type: application/vnd.api+json' \
+  --data '{"data":{"type":"units","attributes":{"name":"<name>","account-id":<account-id>}}}'
+```
+
+### Validations
+
+Parameter | Rule
+--------- | ----
+`name` | Cannot be blank
+`account-id` | Must be an integer
+
 # Coolers
 
 ## Get All
