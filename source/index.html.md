@@ -12,6 +12,7 @@ includes: # adds different pages to the toc; found in ./source/includes
   - introduction
   - requirements
   - filtering
+  - sorting
   - accounts
   - units
   - hubs
