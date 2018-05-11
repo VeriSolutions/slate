@@ -19,7 +19,7 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
   -H "Content-Type: application/vnd.api+json"
 ```
 
-Coolers have a few extra parameters they can be filtered.
+Coolers have a few extra parameters that can be filtered.
 
 Parameter | Default | Description
 --------- | ------- | -----------
@@ -30,4 +30,51 @@ Parameter | Default | Description
 
 <aside class="warning">
 Not every parameter of a Cooler can be filtered. If you would like to be able to filter off a parameter thas is not permitted, contact the VS developers and we will change that for you.
+</aside>
+
+## Create
+
+```shell
+curl --request POST \
+  --url https://cloud.verisolutions.co/api/v7/coolers \
+  --header 'Authorization: Basic <token>' \
+  --header 'Content-Type: application/vnd.api+json' \
+  --data '{"data":{"type":"coolers","attributes":{"name":"<name>","unit-id":<unit-id>}}}'
+```
+
+### Validations
+
+Parameter | Rule
+--------- | ----
+`name` | Cannot be blank
+`unit-id` | Must be an integer
+
+## Update
+
+```shell
+curl --request PATCH \
+  --url http://localhost:9292/api/v7/coolers/<id> \
+  --header 'Authorization: Basic <token>' \
+  --header 'Content-Type: application/vnd.api+json' \
+  --data '{"data":{"type":"coolers","id":"<id>","attributes":{"name":"<name>"}}}'
+```
+
+### Validations
+
+Parameter | Rule
+--------- | ----
+`name` | Cannot be blank
+`unit-id` | Must be an integer
+
+## Destroy
+
+```shell
+curl --request DELETE \
+  --url http://localhost:9292/api/v7/coolers/<id> \
+  --header 'Authorization: Basic <token>' \
+  --header 'Content-Type: application/vnd.api+json' \
+```
+
+<aside class="warning">
+This functionality is only for Admins.
 </aside>
