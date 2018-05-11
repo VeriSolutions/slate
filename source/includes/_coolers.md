@@ -49,6 +49,10 @@ Parameter | Rule
 `name` | Cannot be blank
 `unit-id` | Must be an integer
 
+<aside class="warning">
+This functionality is only for Admins.
+</aside>
+
 ## Update
 
 ```shell
