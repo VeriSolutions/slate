@@ -14,6 +14,7 @@ includes: # adds different pages to the toc; found in ./source/includes
   - filtering
   - accounts
   - units
+  - hubs
   - coolers
   - sensor_readings
   - errors

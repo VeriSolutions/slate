@@ -64,7 +64,7 @@ curl --request PATCH \
 Parameter | Rule
 --------- | ----
 `name` | Cannot be blank
-`unit-id` | Must be an integer
+`unit-id` | If provided, must be an integer
 
 ## Destroy
 
