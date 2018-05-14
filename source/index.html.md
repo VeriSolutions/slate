@@ -20,6 +20,7 @@ includes: # adds different pages to the toc; found in ./source/includes
   - coolers
   - sensor_readings
   - errors
+  - vs_employees
 
 search: true
 ---
