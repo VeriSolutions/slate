@@ -1,6 +1,6 @@
 # Users
 
-## Get All
+## Users - Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/users"
@@ -10,7 +10,7 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/users"
 
 This endpoint retrieves all Users that you have access to.
 
-## Create
+## Users - Create
 
 ```shell
 # Admin
@@ -57,7 +57,7 @@ Parameter | Rule
 `unit-id` | Integer. Required for Unit Users.
 `unit-ids` | An array of integers. Required for Account Users.
 
-## Update
+## Users - Update
 
 ```shell
 curl --request PATCH \
@@ -78,7 +78,7 @@ Parameter | Rule
 `unit-id` | Integer. Required for Unit Users.
 `unit-ids` | An array of integers. Required for Account Users. Note: This will overwrite all existing records. Every time this is called, all applicable Unit IDs must be included.
 
-## Destroy
+## Users - Destroy
 
 ```shell
 curl --request DELETE \

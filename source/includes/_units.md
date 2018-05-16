@@ -1,6 +1,6 @@
 # Units
 
-## Get All
+## Units - Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/units"
@@ -10,7 +10,7 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/units"
 
 This endpoint retrieves all Units that you have access to.
 
-## Create
+## Units - Create
 
 ```shell
 curl --request POST \
@@ -27,7 +27,7 @@ Parameter | Rule
 `account-id` | Must be an integer
 `name` | Cannot be blank
 
-## Update
+## Units - Update
 
 ```shell
 curl --request PATCH \
@@ -44,7 +44,7 @@ Parameter | Rule
 `account-id` | Must be an integer
 `name` | Cannot be blank
 
-## Destroy
+## Units - Destroy
 
 ```shell
 curl --request DELETE \

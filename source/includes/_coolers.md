@@ -1,6 +1,6 @@
 # Coolers
 
-## Get All
+## Coolers - Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
@@ -32,7 +32,7 @@ Parameter | Default | Description
 Not every parameter of a Cooler can be filtered. If you would like to be able to filter off a parameter thas is not permitted, contact the VS developers and we will change that for you.
 </aside>
 
-## Create
+## Coolers - Create
 
 ```shell
 curl --request POST \
@@ -53,7 +53,7 @@ Parameter | Rule
 This functionality is only for Admins.
 </aside>
 
-## Update
+## Coolers - Update
 
 ```shell
 curl --request PATCH \
@@ -70,7 +70,7 @@ Parameter | Rule
 `name` | Cannot be blank
 `unit-id` | If provided, must be an integer
 
-## Destroy
+## Coolers - Destroy
 
 ```shell
 curl --request DELETE \

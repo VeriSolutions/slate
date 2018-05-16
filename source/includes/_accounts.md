@@ -1,6 +1,6 @@
 # Accounts
 
-## Get All
+## Accounts - Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
@@ -10,7 +10,7 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
 
 This endpoint retrieves all Accounts that you have access to.
 
-## Create
+## Accounts - Create
 
 ```shell
 curl --request POST \
@@ -30,7 +30,7 @@ Parameter | Rule
 --------- | ----
 `name` | Cannot be blank
 
-## Update
+## Accounts - Update
 
 ```shell
 curl --request PATCH \
@@ -50,7 +50,7 @@ Parameter | Rule
 --------- | ----
 `name` | Cannot be blank
 
-## Destroy
+## Accounts - Destroy
 
 ```shell
 curl --request DELETE \

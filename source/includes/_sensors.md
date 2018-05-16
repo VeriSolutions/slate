@@ -1,6 +1,6 @@
 # Sensors
 
-## Get All
+## Sensors - Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/sensors"
@@ -10,7 +10,7 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/sensors"
 
 This endpoint retrieves all Sensors that you have access to.
 
-## Create
+## Sensors - Create
 
 ```shell
 curl --request POST \
@@ -30,7 +30,7 @@ Parameter | Rule
 This functionality is only for Admins.
 </aside>
 
-## Update
+## Sensors - Update
 
 ```shell
 curl --request PATCH \
@@ -46,7 +46,7 @@ Parameter | Rule
 --------- | ----
 `unit-id` | If provided, must be an integer
 
-## Destroy
+## Sensors - Destroy
 
 ```shell
 curl --request DELETE \
@@ -54,10 +54,6 @@ curl --request DELETE \
   --header 'Authorization: Basic <token>' \
   --header 'Content-Type: application/vnd.api+json' \
 ```
-
-<aside class="warning">
-This functionality is only for Admins.
-</aside>
 
 ### Validations
 

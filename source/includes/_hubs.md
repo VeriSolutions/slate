@@ -1,6 +1,6 @@
 # Hubs
 
-## Get All
+## Hubs - Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/hubs"
@@ -10,7 +10,7 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/hubs"
 
 This endpoint retrieves all Hubs that you have access to.
 
-## Create
+## Hubs - Create
 
 ```shell
 curl --request POST \
@@ -31,7 +31,7 @@ Parameter | Rule
 This functionality is only for Admins.
 </aside>
 
-## Update
+## Hubs - Update
 
 ```shell
 curl --request PATCH \
@@ -52,7 +52,7 @@ Parameter | Rule
 This functionality is only for Admins.
 </aside>
 
-## Destroy
+## Hubs - Destroy
 
 ```shell
 curl --request DELETE \

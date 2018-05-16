@@ -1,6 +1,6 @@
 # Sensor Readings
 
-## Get All
+## Sensor Readings - Get All
 
 ```shell
 curl -X GET "https://cloud.verisolutions.co/api/v7/sensor-readings"
