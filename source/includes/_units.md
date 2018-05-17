@@ -10,6 +10,21 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/units"
 
 This endpoint retrieves all Units that you have access to.
 
+### Filtering
+
+Almost all attributes are filterable. The following contains special-case information. Refer to the Filtering section for definitions and examples.
+
+Parameter | Type | Details
+--------- | ---- | -----------
+`compliant_temps_count` | Number Range
+`default-units` | Enumerable | `0` is for `"metric"`, `1` is for `"english"` aka U.S. Customary
+`humidity_notify_threshold` | Number Range
+`humidity_recurring_notify_duration` | Number Range
+`notify_threshold` | Number Range
+`recurring_notify_duration` | Number Range
+`temps_count` | Number Range
+`unit-status` | Enumerable | `0` is for `"active"`, `1` is for `"inactive"`
+
 ## Units - Create
 
 ```shell

@@ -10,6 +10,18 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/hubs"
 
 This endpoint retrieves all Hubs that you have access to.
 
+### Filtering
+
+Almost all attributes are filterable. The following contains special-case information. Refer to the Filtering section for definitions and examples.
+
+Parameter | Type | Details
+--------- | ---- | -----------
+`battery` | Number Range
+`current_battery_reading` | Number Range
+`last_online` | Time Range
+`previous_battery_reading` | Number Range
+`rssi` | Number Range
+
 ## Hubs - Create
 
 ```shell

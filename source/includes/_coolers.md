@@ -12,9 +12,22 @@ This endpoint retrieves all Coolers that you have access to.
 
 ### Filtering
 
+Almost all attributes are filterable. The following contains special-case information. Refer to the Filtering section for definitions and examples.
+
+Parameter | Type | Details
+--------- | ---- | -----------
+`bottom-humidity-threshold` | Number Range
+`bottom-temp-threshold` | Number Range
+`corrective-action-delay` | Number Range
+`humidity-notify-threshold` | Number Range
+`notify-threshold` | Number Range
+`top-humidity-threshold` | Number Range
+`top-temp-threshold` | Number Range
+
+### Filtering
+
 ```shell
-curl -X GET "https://cloud.verisolutions.co/api/v7/coolers"
-  -d "filter[show-temp]=1"
+curl -X GET "https://cloud.verisolutions.co/api/v7/coolers?filter[show-temp]=1"
   -H "Authorization: Basic <token>"
   -H "Content-Type: application/vnd.api+json"
 ```

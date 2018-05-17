@@ -10,6 +10,18 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/users"
 
 This endpoint retrieves all Users that you have access to.
 
+### Filtering
+
+Almost all attributes are filterable. The following contains special-case information. Refer to the Filtering section for definitions and examples.
+
+Parameter | Type | Details
+--------- | ---- | -----------
+`confirmed_at` | Time Range
+`default-units` | Enumerable | `0` is for `"metric"`, `1` is for `"english"` aka U.S. Customary
+`last_report_sent_at` | Time Range
+`report-frequency` | Enumerable | `0` is for `"daily"`, `1` is for `"weekly"`, `2` is for `"bi_weekly"`, `3` is for `"monthly"`
+`sign_in_count` | Number Range
+
 ## Users - Create
 
 ```shell

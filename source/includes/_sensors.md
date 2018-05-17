@@ -10,6 +10,20 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/sensors"
 
 This endpoint retrieves all Sensors that you have access to.
 
+### Filtering
+
+Almost all attributes are filterable. The following contains special-case information. Refer to the Filtering section for definitions and examples.
+
+Parameter | Type | Details
+--------- | ---- | -----------
+`battery` | Number Range
+`humidity` | Number Range
+`last_online` | Time Range
+`readings_count` | Number Range
+`rssi` | Number Range
+`successful_readings_count` | Number Range
+`temp` | Number Range
+
 ## Sensors - Create
 
 ```shell

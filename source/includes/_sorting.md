@@ -3,8 +3,7 @@
 > Example of sorting Accounts to be in descending order of `created-at`
 
 ```shell
-curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
-  -d "sort=-name"
+curl -X GET "https://cloud.verisolutions.co/api/v7/accounts?sort=-name"
   -H "Authorization: Basic <token>"
   -H "Content-Type: application/vnd.api+json"
 ```

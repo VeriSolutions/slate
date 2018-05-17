@@ -10,6 +10,15 @@ curl -X GET "https://cloud.verisolutions.co/api/v7/accounts"
 
 This endpoint retrieves all Accounts that you have access to.
 
+### Filtering
+
+Almost all attributes are filterable. The following contains special-case information. Refer to the Filtering section for definitions and examples.
+
+Parameter | Type | Details
+--------- | ---- | -----------
+`account-type` | Enumerable | `0` is for `"customers"`, `1` is for `"pilot"`, `2` is for `"partner"`, `3` is for `"test"`
+`confirmed-at` | Time Range
+
 ## Accounts - Create
 
 ```shell
