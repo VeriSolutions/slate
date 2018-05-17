@@ -16,11 +16,11 @@ Almost all attributes are filterable. The following contains special-case inform
 
 Parameter | Type | Details
 --------- | ---- | -----------
-`confirmed_at` | Time Range
+`confirmed-at` | Time Range
 `default-units` | Enumerable | `0` is for `"metric"`, `1` is for `"english"` aka U.S. Customary
-`last_report_sent_at` | Time Range
-`report-frequency` | Enumerable | `0` is for `"daily"`, `1` is for `"weekly"`, `2` is for `"bi_weekly"`, `3` is for `"monthly"`
-`sign_in_count` | Number Range
+`last-report-sent-at` | Time Range
+`report-frequency` | Enumerable | `0` is for `"daily"`, `1` is for `"weekly"`, `2` is for `"bi-weekly"`, `3` is for `"monthly"`
+`sign-in-count` | Number Range
 
 ## Users - Create
 

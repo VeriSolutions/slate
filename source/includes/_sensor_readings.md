@@ -18,7 +18,7 @@ Parameter | Type | Details
 --------- | ---- | -----------
 `battery` | Number Range
 `humidity` | Number Range
-`reading_time` | Time Range
-`rolling_humidity` | Number Range
+`reading-time` | Time Range
+`rolling-humidity` | Number Range
 `rssi` | Number Range
 `temp` | Number Range

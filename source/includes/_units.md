@@ -16,13 +16,13 @@ Almost all attributes are filterable. The following contains special-case inform
 
 Parameter | Type | Details
 --------- | ---- | -----------
-`compliant_temps_count` | Number Range
+`compliant-temps-count` | Number Range
 `default-units` | Enumerable | `0` is for `"metric"`, `1` is for `"english"` aka U.S. Customary
-`humidity_notify_threshold` | Number Range
-`humidity_recurring_notify_duration` | Number Range
-`notify_threshold` | Number Range
-`recurring_notify_duration` | Number Range
-`temps_count` | Number Range
+`humidity-notify-threshold` | Number Range
+`humidity-recurring-notify-duration` | Number Range
+`notify-threshold` | Number Range
+`recurring-notify-duration` | Number Range
+`temps-count` | Number Range
 `unit-status` | Enumerable | `0` is for `"active"`, `1` is for `"inactive"`
 
 ## Units - Create

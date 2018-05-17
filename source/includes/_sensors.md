@@ -18,10 +18,10 @@ Parameter | Type | Details
 --------- | ---- | -----------
 `battery` | Number Range
 `humidity` | Number Range
-`last_online` | Time Range
-`readings_count` | Number Range
+`last-online` | Time Range
+`readings-count` | Number Range
 `rssi` | Number Range
-`successful_readings_count` | Number Range
+`successful-readings-count` | Number Range
 `temp` | Number Range
 
 ## Sensors - Create

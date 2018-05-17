@@ -17,9 +17,9 @@ Almost all attributes are filterable. The following contains special-case inform
 Parameter | Type | Details
 --------- | ---- | -----------
 `battery` | Number Range
-`current_battery_reading` | Number Range
-`last_online` | Time Range
-`previous_battery_reading` | Number Range
+`current-battery-reading` | Number Range
+`last-online` | Time Range
+`previous-battery-reading` | Number Range
 `rssi` | Number Range
 
 ## Hubs - Create
