@@ -18,6 +18,7 @@ includes: # adds different pages to the toc; found in ./source/includes
   - hubs
   - sensors
   - coolers
+  - notification_settings
   - sensor_readings
   - users
   - errors
