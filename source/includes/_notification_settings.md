@@ -16,8 +16,8 @@ Almost all attributes are filterable. The following contains special-case inform
 
 Parameter | Type | Details
 --------- | ---- | -----------
-`cooler_id` | Number | Integer
-`out_of_range_threshold` | Number | Range
-`recurring_notify_duration` | Number | Range
-`last_threshold_sent` | Time | Range
-`last_humidity_threshold_sent` | Time | Range
+`cooler_id` | Number Integer
+`out_of_range_threshold` | Number Range
+`recurring_notify_duration` | Number Range
+`last_threshold_sent` | Time Range
+`last_humidity_threshold_sent` | Time Range
