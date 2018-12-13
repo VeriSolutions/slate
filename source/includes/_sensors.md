@@ -59,6 +59,10 @@ curl --request PATCH \
 Parameter | Rule
 --------- | ----
 `unit-id` | If provided, must be an integer
+`location-id` | If provided, must be a Cooler id or null. If provided, must set `location-type` to `"Cooler"` or `null`, respectively
+`location-type` | Must be `"Cooler"` or `null`. If `"Cooler"` provided, then must set `location-id` to a Cooler id
+
+
 
 ## Sensors - Destroy
 
